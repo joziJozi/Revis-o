@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', function(req, res){
    res.json({})
 })
-//revisaos
+//revisao
 router.get('/revisao',(req, res) => revisaoController.getAll(req, res) )
 router.post('/revisao',(req, res) => revisaoController.create(req, res) )
 router.get('/revisao:id',(req, res) => revisaoController.get(req, res) )

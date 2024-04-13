@@ -7,7 +7,7 @@ console.log(process.env.NOME)
 const conn = require('./db/conn')
 conn()
 
-const routes = require('./routes/routes')
+const routes = require('./routes/Routes')
 
 app.use('/', routes)
 

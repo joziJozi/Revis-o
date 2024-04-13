@@ -1,19 +1,20 @@
 const express = require('express')
-const revisaoController = require('../Controllers/revisaoController')
-const revisao = require('../Models/revisao')
+const AlunoController = require('../Controllers/AlunoController')
 const router = express.Router()
 
 router.get('/', function(req, res){
    res.json({})
 })
-//revisao
-router.get('/revisao',(req, res) => revisaoController.getAll(req, res) )
-router.post('/revisao',(req, res) => revisaoController.create(req, res) )
-router.get('/revisao:id',(req, res) => revisaoController.get(req, res) )
-router.put('/revisao:id',(req, res) => revisaoController.update(req, res) )
-router.delete('/revisao:id',(req, res) => revisaoController.delete(req, res) )
- 
+//Alunos
+router.get('/Alunos',(req, res) => AlunoController.getAll(req, res) )
+router.post('/Alunos',(req, res) => AlunoController.create(req, res) )
+router.get('/Alunos/aprovados',(req, res) => AlunoController.getAprovados(req, res) )
+router.get('/Alunos/reprovados',(req, res) => AlunoController.getreprovados(req, res) )
+router.get('/Alunos/recuperacao',(req, res) => AlunoController.getrecuperacao(req, res) )
+router.put('/Alunos',(req, res) => AlunoController.update(req, res) )
+router.delete('/Alunos',(req, res) => AlunoController.delete(req, res) )
 
-router.get('/revisao',(req, res) => RevisaoController.getAll(req, res) )
+
+router.get('/Alunos',(req, res) => AlunoController.getAll(req, res) )
 
 module.exports = router
